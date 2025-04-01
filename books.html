@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books - School Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Georgia&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+<script>
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+        })
+        .catch(error => console.error("Error loading header:", error));
+</script>
+    
+    <section class="books-section">
+        <h1>Explore Our Collection</h1>
+        <div class="books-grid">
+            <div class="book">
+                <img src="books\12Rules.jpg" alt="Book Cover">
+                <h3>12 Rules For Life</h3>
+                <p>Author: Jordan B. Peterson</p>
+                <p class="availability">Available</p>
+            </div>
+            <div class="book">
+                <img src="books\AoT.jpg" alt="Book Cover">
+                <h3>Attack On Titan 1</h3>
+                <p>Author: Hajime Isayama</p>
+                <p class="availability unavailable">Checked Out</p>
+            </div>
+            <div class="book">
+                <img src="books\BeyondGoodAndEvil.jpg" alt="Book Cover">
+                <h3>Beyond Good And Evil</h3>
+                <p>Author: Friedrich Nietzsche</p>
+                <p class="availability">Available</p>
+            </div>
+            <div class="book">
+                <img src="books\CrimeAndPunishment.jpg" alt="Book Cover">
+                <h3>Crime And Punishment</h3>
+                <p>Author: Fyodor Dostoevsky</p>
+                <p class="availability unavailable">Checked Out</p>
+            </div>
+            <div class="book">
+                <img src="books\DaVinciCode.jpg" alt="Book Cover">
+                <h3>The Da Vinci Code</h3>
+                <p>Author: Dan Brown</p>
+                <p class="availability unavailable">Checked Out</p>
+            </div>
+            <div class="book">
+                <img src="books\Dune.jpg" alt="Book Cover">
+                <h3>Dune: A Brief History</h3>
+                <p>Author: University Press</p>
+                <p class="availability">Available</p>
+            </div>
+            <div class="book">
+                <img src="books\Ender'sGame.jpg" alt="Book Cover">
+                <h3>Ender's Game</h3>
+                <p>Author: Jed Alger</p>
+                <p class="availability">Available</p>
+            </div>
+            <div class="book">
+                <img src="books\Game of Throne.jpg" alt="Book Cover">
+                <h3>Game Of Thrones</h3>
+                <p>Author: George R. R. Martin</p>
+                <p class="availability">Available</p>
+            </div>
+            <div class="book">
+                <img src="books\HarryPotter.jpg" alt="Book Cover">
+                <h3>Harry Potter & The Philosopher's Stone</h3>
+                <p>Author: J.K. Rownling</p>
+                <p class="availability unavailable">Checked Out</p>
+            </div>
+            <div class="book">
+                <img src="books\Heroes.jpg" alt="Book Cover">
+                <h3>The Heroes Of Olympus</h3>
+                <p>Author: Rick Riordan</p>
+                <p class="availability unavailable">Checked Out</p>
+            </div>
+            <div class="book">
+                <img src="books\Hitchhiker'sGuide.jpg" alt="Book Cover">
+                <h3>The Hitchhiker's Guide To The Galaxy</h3>
+                <p>Author: Douglas Adams</p>
+                <p class="availability">Available</p>
+            </div>
+            <div class="book">
+                <img src="books\HungerGames.jpg" alt="Book Cover">
+                <h3>The Hunger Games</h3>
+                <p>Author: Suzanne Collins</p>
+                <p class="availability unavailable">Checked Out</p>
+            </div>
+            <div class="book">
+                <img src="books\LordOfMysteries.jpg" alt="Book Cover">
+                <h3>Lord Of Mysteries: Lightseeker</h3>
+                <p>Author: Cuttlefish That Loves Diving</p>
+                <p class="availability unavailable">Checked Out</p>
+            </div>
+            <!-- Add more books here -->
+        </div>
+    </section>
+</body>
+</html>
+
+<style>
+.books-section {
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    height: 70vh; 
+    overflow-y: auto; 
+    padding-right: 10px; 
+    -ms-overflow-style: none;
+}
+
+.book {
+    background: #A24B31;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    width: 200px;
+    height: 450px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.book img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 5px;
+}
+
+.book h3, .book p {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    padding: 5px 0;
+    margin: 0; 
+    flex-grow: 1; 
+    max-height: 40px; 
+    line-height: 1.2;
+    text-align: center; 
+}
+
+.availability {
+    font-weight: bold;
+    color: #D9B59E;
+}
+
+.unavailable {
+    color: #766F68;
+}
+</style>
