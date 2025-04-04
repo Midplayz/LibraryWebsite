@@ -40,7 +40,46 @@ function showTab(tab) {
     document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
     document.querySelectorAll('.auth-content').forEach(content => content.classList.remove('active'));
 
-    // Add 'active' class to the clicked tab and its respective content
     document.getElementById(tab).classList.add('active');
     document.querySelector(`.tab-button[onclick="showTab('${tab}')"]`).classList.add('active');
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const books = document.querySelectorAll(".book");
+    const modal = document.getElementById("book-modal");
+    const closeBtn = document.querySelector(".close-button");
+
+    const modalCover = document.getElementById("modal-cover");
+    const modalTitle = document.getElementById("modal-title");
+    const modalAuthor = document.getElementById("modal-author");
+    const modalSynopsis = document.getElementById("modal-synopsis");
+    const modalStatus = document.getElementById("modal-status");
+    const modalRating = document.getElementById("modal-rating");
+
+    books.forEach(book => {
+        book.addEventListener("click", () => {
+            modalCover.src = book.querySelector("img").src;
+            modalTitle.textContent = book.querySelector("h3").textContent;
+            modalAuthor.textContent = book.querySelector("p").textContent;
+            modalSynopsis.textContent = book.dataset.synopsis || "No synopsis available.";
+            const isAvailable = book.querySelector(".availability").classList.contains("unavailable") ? "Borrowed" : "Available";
+            modalStatus.textContent = `Status: ${isAvailable}`;
+            modalStatus.style.color = isAvailable === "Available" ? "#4CAF50" : "#e53935";
+
+            const rating = parseFloat(book.dataset.rating) || 0;
+            modalRating.innerHTML = "Rating: " + "★".repeat(rating) + "☆".repeat(5 - rating);
+
+            modal.classList.remove("hidden");
+        });
+    });
+
+    closeBtn.addEventListener("click", () => {
+        modal.classList.add("hidden");
+    });
+
+    window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.classList.add("hidden");
+        }
+    });
+});

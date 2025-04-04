@@ -1,101 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Books - School Library</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Georgia&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Georgia&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div id="header-placeholder"></div>
 
-<script>
-    fetch("header.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("header-placeholder").innerHTML = data;
-        })
-        .catch(error => console.error("Error loading header:", error));
-</script>
-    
+    <script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-placeholder").innerHTML = data;
+            })
+            .catch(error => console.error("Error loading header:", error));
+    </script>
+
     <section class="books-section">
         <h1>Explore Our Collection</h1>
         <div class="books-grid">
-            <div class="book">
+            <div class="book"
+                data-synopsis="12 Rules for Life: An Antidote to Chaos is a 2018 self-help book by the Canadian clinical psychologist Jordan Peterson. It provides life advice through essays in abstract ethical principles, psychology, mythology, religion, and personal anecdotes."
+                data-rating="4">
                 <img src="books\12Rules.jpg" alt="Book Cover">
                 <h3>12 Rules For Life</h3>
                 <p>Author: Jordan B. Peterson</p>
                 <p class="availability">Available</p>
             </div>
-            <div class="book">
+            <div class="book"
+                data-synopsis="In 100 years, humanity lives in fear of the Titans. A race of beasts who take the appearance of humans but are much larger and lack sexual organs. Their only purpose is to feast upon humans. However, humanity barricaded themselves in three 50-meter walls to protect themselves from the terror of the Titans."
+                data-rating="5">
                 <img src="books\AoT.jpg" alt="Book Cover">
                 <h3>Attack On Titan 1</h3>
                 <p>Author: Hajime Isayama</p>
                 <p class="availability unavailable">Checked Out</p>
             </div>
-            <div class="book">
+            <div class="book"
+                data-synopsis="Beyond Good and Evil: Prelude to a Philosophy of the Future is a book by philosopher Friedrich Nietzsche that covers ideas in his previous work Thus Spoke Zarathustra but with a more polemical approach."
+                data-rating="4">
                 <img src="books\BeyondGoodAndEvil.jpg" alt="Book Cover">
                 <h3>Beyond Good And Evil</h3>
                 <p>Author: Friedrich Nietzsche</p>
                 <p class="availability">Available</p>
             </div>
-            <div class="book">
+            <div class="book"
+                data-synopsis="Crime and Punishment (C&P), in particular, is one of Dostoevsky's finest novels. It chronicles the story of Raskolnikov, the protagonist, who murders a pawnbroker and her sister in cold blood and the aftermath of these abhorrent actions."
+                data-rating="4">
                 <img src="books\CrimeAndPunishment.jpg" alt="Book Cover">
                 <h3>Crime And Punishment</h3>
                 <p>Author: Fyodor Dostoevsky</p>
                 <p class="availability unavailable">Checked Out</p>
             </div>
-            <div class="book">
+            <div class="book"
+                data-synopsis="The Da Vinci Code follows symbologist Langdon and cryptologist Sophie Neveu after a murder in the Louvre Museum in Paris entangles them in a dispute between the Priory of Sion and Opus Dei over the possibility of Jesus and Mary Magdalene having had a child together."
+                data-rating="5">
                 <img src="books\DaVinciCode.jpg" alt="Book Cover">
                 <h3>The Da Vinci Code</h3>
                 <p>Author: Dan Brown</p>
                 <p class="availability unavailable">Checked Out</p>
             </div>
-            <div class="book">
+            <div class="book"
+                data-synopsis="Set on the desert planet Arrakis, Dune is the story of the boy Paul Atreides, heir to a noble family tasked with ruling an inhospitable world where the only thing of value is the “spice” melange, a drug capable of extending life and enhancing consciousness."
+                data-rating="3">
                 <img src="books\Dune.jpg" alt="Book Cover">
                 <h3>Dune: A Brief History</h3>
                 <p>Author: University Press</p>
                 <p class="availability">Available</p>
             </div>
-            <div class="book">
+            <div class="book"
+                data-synopsis="Ender plays a computerized 'mind game' set in a fantasy world, which presents difficult choices to the player."
+                data-rating="4">
                 <img src="books\Ender'sGame.jpg" alt="Book Cover">
                 <h3>Ender's Game</h3>
                 <p>Author: Jed Alger</p>
                 <p class="availability">Available</p>
             </div>
-            <div class="book">
+            <div class="book"
+                data-synopsis="Game of Thrones follows the interconnected storylines of several noble families in the fictional world of Westeros, as they fight for control of the Iron Throne and face threats from an ancient, supernatural enemy, the White Walkers. "
+                data-rating="5">
                 <img src="books\Game of Throne.jpg" alt="Book Cover">
                 <h3>Game Of Thrones</h3>
                 <p>Author: George R. R. Martin</p>
                 <p class="availability">Available</p>
             </div>
-            <div class="book">
+            <div class="book"
+                data-synopsis="Orphaned Harry Potter discovers on his eleventh birthday that he is a wizard and has been accepted into Hogwarts School of Witchcraft and Wizardry. 1  There, he befriends Ron Weasley and Hermione Granger and learns about the magical world, his own mysterious past, and a powerful, evil wizard named Voldemort who murdered his parents. The trio uncovers a plot involving the legendary Philosopher's Stone and must work together to protect it."
+                data-rating="4">
                 <img src="books\HarryPotter.jpg" alt="Book Cover">
                 <h3>Harry Potter & The Philosopher's Stone</h3>
                 <p>Author: J.K. Rownling</p>
                 <p class="availability unavailable">Checked Out</p>
             </div>
-            <div class="book">
+            <div class="book"
+                data-synopsis="Seven Greek and Roman demigods unite to stop the Earth goddess Gaea from rising and destroying the world. They face monsters, giants, and their own differences to fulfill a prophecy and save Olympus."
+                data-rating="4">
                 <img src="books\Heroes.jpg" alt="Book Cover">
                 <h3>The Heroes Of Olympus</h3>
                 <p>Author: Rick Riordan</p>
                 <p class="availability unavailable">Checked Out</p>
             </div>
-            <div class="book">
+            <div class="book"
+                data-synopsis="Earthman Arthur Dent is saved from Earth's destruction by an alien friend and travels the hilariously absurd galaxy with a guide, encountering bizarre life and searching for the meaning of everything."
+                data-rating="5">
                 <img src="books\Hitchhiker'sGuide.jpg" alt="Book Cover">
                 <h3>The Hitchhiker's Guide To The Galaxy</h3>
                 <p>Author: Douglas Adams</p>
                 <p class="availability">Available</p>
             </div>
-            <div class="book">
+            <div class="book"
+                data-synopsis="Teenager Katniss volunteers for a deadly televised fight to the death, the Hunger Games, in a dystopian future. She must survive against other children while challenging a cruel government."
+                data-rating="4">
                 <img src="books\HungerGames.jpg" alt="Book Cover">
                 <h3>The Hunger Games</h3>
                 <p>Author: Suzanne Collins</p>
                 <p class="availability unavailable">Checked Out</p>
             </div>
-            <div class="book">
+            <div class="book"
+                data-synopsis="Reborn in a mystical world, Klein (as the adventurer Gehrman Sparrow) keeps unraveling secrets and gaining power amidst hidden dangers and cosmic threats."
+                data-rating="5">
                 <img src="books\LordOfMysteries.jpg" alt="Book Cover">
                 <h3>Lord Of Mysteries: Lightseeker</h3>
                 <p>Author: Cuttlefish That Loves Diving</p>
@@ -103,77 +132,140 @@
             </div>
             <!-- Add more books here -->
         </div>
+        <!-- Book Modal -->
+        <div id="book-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <img id="modal-cover" src="" alt="Book Cover">
+                <h2 id="modal-title"></h2>
+                <h4 id="modal-author"></h4>
+                <p id="modal-synopsis"></p>
+                <p id="modal-status"></p>
+                <div id="modal-rating"></div>
+            </div>
+        </div>
+
     </section>
 </body>
+
 </html>
 
 <style>
-.books-section {
-    height: 100vh; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 20px;
-    text-align: center;
-}
+    .books-section {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px;
+        text-align: center;
+    }
 
 
-.books-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
+    .books-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        width: 90%;
+        max-width: 1000px;
+        margin: 0 auto;
 
-    height: 70vh; 
-    overflow-y: auto; 
-    padding-right: 10px; 
-    -ms-overflow-style: none;
-}
+        height: 70vh;
+        overflow-y: auto;
+        padding-right: 10px;
+        -ms-overflow-style: none;
+    }
 
-.book {
-    background: #A24B31;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    color: white;
-    width: 200px;
-    height: 450px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;
-}
+    .book {
+        background: #A24B31;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        color: white;
+        width: 200px;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+    }
 
-.book img {
-    width: 100%;
-    height: 300px; 
-    object-fit: cover; 
-    border-radius: 5px;
-}
+    .book img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
 
-.book h3, .book p {
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
-    padding: 5px 0;
-    margin: 0; 
-    flex-grow: 1; 
-    max-height: 40px; 
-    line-height: 1.2;
-    text-align: center; 
-}
+    .book h3,
+    .book p {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        padding: 5px 0;
+        margin: 0;
+        flex-grow: 1;
+        max-height: 40px;
+        line-height: 1.2;
+        text-align: center;
+    }
 
-.availability {
-    font-weight: bold;
-    color: #D9B59E;
-}
+    .book:hover {
+        cursor: pointer;
+    }
 
-.unavailable {
-    color: #766F68;
-}
+    .availability {
+        font-weight: bold;
+        color: #D9B59E;
+    }
+
+    .unavailable {
+        color: #766F68;
+    }
+
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(17, 25, 30, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+    }
+
+    .modal.hidden {
+        display: none;
+    }
+
+    .modal-content {
+        background: #D9B59E;
+        color: #111B29;
+        padding: 20px;
+        border-radius: 12px;
+        max-width: 500px;
+        text-align: center;
+        position: relative;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content img {
+        width: 150px;
+        height: auto;
+        margin-bottom: 15px;
+        border-radius: 6px;
+    }
+
+    .close-button {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        font-size: 24px;
+        cursor: pointer;
+        color: #21161B;
+    }
 </style>
